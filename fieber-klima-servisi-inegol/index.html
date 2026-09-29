@@ -126,23 +126,71 @@ h2{font-size:clamp(26px,6vw,38px);letter-spacing:-.025em;line-height:1.12;font-w
 }
 </style>
 <style>
-.makale{max-width:760px;padding-top:28px;padding-bottom:40px}
-.iz{font-size:14px;color:var(--muted);font-weight:600}
+.tema-sicak,.tema-genel{--ac:var(--warm);--acbg:var(--warm-bg)}
+.tema-soguk{--ac:var(--cool);--acbg:var(--cool-bg)}
+.kap{max-width:880px}
+/* hero */
+.h2r{background:radial-gradient(120% 90% at 0% 0%,var(--acbg),transparent 70%),var(--bg);border-bottom:1px solid var(--line);padding:26px 0 34px}
+.iz{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:14px;color:var(--muted);font-weight:600}
 .iz a{border-bottom:1px solid var(--line)}
-.makale h1{font-size:clamp(32px,8vw,52px);line-height:1.08;margin:14px 0 14px}
-.giris{font-size:19px;color:var(--muted)}
-.makale h2{font-size:clamp(22px,5.5vw,30px);margin:40px 0 12px}
-.makale p{font-size:17px;margin:0 0 14px}
-.makale ul.madde{margin:0 0 14px 20px;font-size:17px}
-.makale ul.madde li{margin:6px 0}
-.sss details{border-top:1px solid var(--line);padding:14px 0}
-.sss details:last-child{border-bottom:1px solid var(--line)}
-.sss summary{font-weight:700;font-size:17px;cursor:pointer}
-.sss details p{margin-top:10px;color:var(--muted)}
-.kutu{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 20px;margin-top:40px}
-.kutu p{margin:4px 0}
-.linkler{list-style:none;display:grid;gap:8px;margin-top:10px}
-.linkler a{display:block;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);font-weight:700}
+.iz svg{font-size:12px}
+.iz span{color:var(--ink)}
+.h2r h1{font-size:clamp(30px,7.4vw,52px);line-height:1.06;letter-spacing:-.03em;margin:16px 0 14px}
+.giris{font-size:clamp(17px,4.4vw,19px);color:var(--muted);max-width:60ch}
+.guven{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;list-style:none}
+.guven li{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;background:var(--card);border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:700}
+.guven svg{font-size:16px;color:var(--muted)}
+.guven .y svg{color:#F4A417}
+.guven small{font-size:inherit;color:var(--muted);font-weight:600}
+.h2r .cta{margin-top:22px}
+/* icerik */
+.icerik{padding-top:22px;padding-bottom:36px;display:grid;gap:16px}
+.kart{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px 20px}
+.kart .bs{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.kart .ik{display:flex;align-items:center;justify-content:center;flex:none;width:42px;height:42px;border-radius:12px;background:var(--acbg);color:var(--ac);font-size:22px}
+.kart h2{font-size:clamp(20px,5vw,26px);line-height:1.2;margin:0}
+.kart p{font-size:17px;margin:0 0 12px;color:#2b3242}
+.kart p:last-child{margin-bottom:0}
+.madde{list-style:none;margin:2px 0 12px;display:grid;gap:8px}
+.kart .madde:last-child{margin-bottom:0}
+.madde li{display:flex;gap:10px;align-items:flex-start;font-size:17px;font-weight:600;padding:10px 12px;background:var(--bg);border-radius:12px}
+.madde svg{font-size:18px;margin-top:3px;color:var(--wa)}
+/* orta bant */
+.bant{background:var(--ink);color:#F2EEE7;border-radius:22px;padding:30px 22px}
+.bant b{display:block;font-size:clamp(22px,5.6vw,30px);line-height:1.2;letter-spacing:-.02em;font-weight:800}
+.bant p{color:#AEB5C2;margin-top:6px;font-weight:600}
+.bant .cta{margin-top:18px}
+.bant .btn.ara{background:#fff;color:var(--ink)}
+.bant .btn.wa{background:transparent;border-color:#fff;color:#fff}
+.bant .btn.wa svg{color:#4BE07E}
+/* sss */
+.sssk h2,.digerk h2{font-size:clamp(22px,5.5vw,30px);margin:14px 0 14px}
+.sss{display:grid;gap:10px}
+.sss details{background:var(--card);border:1px solid var(--line);border-radius:14px}
+.sss summary{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 18px;font-weight:700;font-size:17px;cursor:pointer;list-style:none}
+.sss summary::-webkit-details-marker{display:none}
+.sss summary:after{content:"+";flex:none;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--acbg);color:var(--ac);font-size:20px;font-weight:800;line-height:1}
+.sss details[open] summary:after{content:"\2212"}
+.sss details[open]{border-color:var(--ac)}
+.sss details p{padding:0 18px 18px;color:var(--muted);font-size:16px;margin:0}
+/* adres */
+.kutu{display:grid;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px 20px}
+.kutu .ik{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:var(--acbg);color:var(--ac);font-size:22px}
+.kutu p{margin:0}
+.kutu .ad{font-weight:800;font-size:18px}
+.kutu .sa{color:var(--muted);font-size:15px;font-weight:600}
+.kutu .btn{height:50px;width:100%}
+.linkler{grid-template-columns:1fr;gap:10px;margin:0}
+.linkler a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;border-radius:14px;line-height:1.3}
+.linkler a svg{font-size:18px;color:var(--ac);flex:none}
+.linkler a:hover{border-color:var(--ac)}
+@media (min-width:701px){
+  .kart{padding:28px 30px}
+  .madde{grid-template-columns:1fr 1fr}
+  .kutu{grid-template-columns:auto 1fr auto;align-items:center;gap:18px;padding:22px 26px}
+  .kutu .btn{width:auto}
+  .linkler{grid-template-columns:1fr 1fr}
+}
 </style>
 </head>
 <body>
@@ -158,35 +206,54 @@ h2{font-size:clamp(26px,6vw,38px);letter-spacing:-.025em;line-height:1.12;font-w
   <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
 </svg>
 
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-ok" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-tik" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.6 14.6L6 12.2l1.4-1.4 3 3 6.2-6.2L18 9z"/></symbol>
+  <symbol id="i-anahtar" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></symbol>
+  <symbol id="i-saat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-sag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></symbol>
+</svg>
 <header class="top"><div class="w">
   <a class="logo" href="/"><i></i>Eymen Teknik</a>
   <a class="tel" data-olay="ara" href="tel:+905065420129"><svg><use href="#i-tel"/></svg><span>0506 542 01 29</span></a>
 </div></header>
 
-<main class="w makale">
-  <nav class="iz"><a href="/">Ana sayfa</a> › Fieber Klima Yetkili Servisi ve Montajı İnegöl</nav>
+<main class="tema-soguk">
+<div class="h2r"><div class="w kap">
+  <nav class="iz" aria-label="Sayfa yolu"><a href="/">Ana sayfa</a><svg><use href="#i-sag"/></svg><span>Fieber Klima Yetkili Servisi ve Montajı İnegöl</span></nav>
   <h1>Fieber Klima Yetkili Servisi ve Montajı İnegöl</h1>
   <p class="giris">Yazın serinlemek, kışın ara mevsimde odayı ısıtmak için klima düşünüyorsanız doğru cihazı seçmek kadar doğru kurdurmak da önemli. Eymen Teknik, İnegöl&#x27;de Fieber klima yetkili servisidir; klima satışı, montajı ve bakımı için tek adresten destek veriyoruz.</p>
   <p class="yetkili"><svg><use href="#i-rozet"/></svg>Sanica kombi · Fieber ve Aiwa klima yetkili servisi</p>
+  <ul class="guven">
+    <li class="y"><svg><use href="#i-yildiz"/></svg>4,7 <small>· Google'da 12 yorum</small></li>
+    <li><svg><use href="#i-saat"/></svg>Pzt–Cmt 09:00 – 18:30 · Paz kapalı</li>
+    <li><svg><use href="#i-pin"/></svg>İnegöl</li>
+  </ul>
   <div class="cta">
     <a class="btn ara" data-olay="ara" href="tel:+905065420129"><svg><use href="#i-tel"/></svg>Hemen ara</a>
     <a class="btn wa" data-olay="whatsapp" href="https://wa.me/905065420129?text=Merhaba%2C%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20%C4%B0neg%C3%B6l%27de%20Fieber%20klima%20sat%C4%B1%C5%9F%C4%B1/montaj%C4%B1/bak%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%20Oda%20b%C3%BCy%C3%BCkl%C3%BC%C4%9F%C3%BCm%20ve%20adresim%3A%20"><svg><use href="#i-wa"/></svg>WhatsApp'tan yaz</a>
   </div>
+</div></div>
 
-  <h2>Fieber klima nedir, hangi tipleri var?</h2><p>Fieber, resmi sitesinde kendini inverter klima ve ısı pompası sistemleri sunan bir marka olarak tanıtıyor. Duvar tipi, kaset tipi ve salon tipi klima kategorileri var. Marka; DC Inverter teknolojisini, gümüş iyon özelliğini ve akıllı bağlantı ile uzaktan kontrolü öne çıkarıyor.</p><p>Evde çoğunlukla duvar tipi tercih edilir. Geniş salonlar ya da işyerleri için salon veya kaset tipi de gündeme gelebilir. Hangi modellerin elimizde olduğunu, ihtiyacınıza göre telefonda konuşuruz.</p><h2>Doğru klimayı seçmek için sorular</h2><p>Klima seçerken önce şunları düşünün. Cevaplarınızı bize söylerseniz uygun seçeneği birlikte daraltırız.</p><ul class="madde"><li>Klima hangi odaya veya kaç metrekarelik alana takılacak?</li><li>Oda güneş alıyor mu, çok kişi kullanıyor mu?</li><li>Dış ünite için uygun ve güvenli bir yer var mı?</li><li>Sadece serinletme mi, ısıtma da mı bekliyorsunuz?</li></ul><h2>Montaj: işin asıl belirleyici kısmı</h2><p>Klima ne kadar iyi olursa olsun, kötü montaj performansı düşürür. İç ve dış ünitenin yerleşimi, boru güzergâhı ve drenaj düzeni; hem verim hem de evin temizliği açısından önemlidir. Bu yüzden montaja başlamadan önce yerleşimi sizinle netleştiriyoruz.</p><p>Müşterimiz Sevdanur Y. bunu şöyle özetledi: &quot;Görüştüğümüz diğer firmalar randevu verme zahmetinde bile bulunmazken arar aramaz geldi.&quot; Biz de sözümüzü yerine getirmeye çalışıyoruz.</p><h2>Klimayı verimli kullanmak için genel öneriler</h2><p>Fieber&#x27;in resmi sitesi sessiz çalışma modu ve hassas sıcaklık kontrolünü konfor özellikleri arasında sayıyor. Bu özelliklerden yararlanmak için klimayı gün boyu sık sık açıp kapatmak yerine dengeli bir sıcaklığa ayarlamak çoğu zaman daha rahat bir kullanım sağlar.</p><p>Oda kapıları ve pencereler kapalıyken klima daha az zorlanır. Filtrelerin temiz olması da hem hava akışı hem de hijyen için önemlidir. Bunlar her klima için geçerli genel tavsiyelerdir; cihazınıza özel bilgi için kullanım kılavuzuna göz atmanızı öneririz.</p><p>Montaj sonrasında kumandayı ve temel işlevleri size tek tek gösteririz.</p><h2>Bakım ve dürüst bir uyarı</h2><p>Klima bakımı yapıyoruz: filtre temizliği ve cihazın genel kontrolü, kullanım sezonundan önce yaptırılırsa en faydalısıdır. Ancak ömrünü doldurmuş, yıpranmış eski klimaları yeniden canlandırma işi yapmıyoruz; bunu baştan söylemek isteriz.</p><p>İnegöl merkez, mahalleler ve köyler ile İznik ve Gürsu&#x27;ya hizmet veriyoruz. Dükkânımız İstiklal Cd. No:122/B, Süleymaniye, İnegöl&#x27;de; Pazartesi–Cumartesi 09:00–18:30 açığız, pazar kapalıyız. Google&#x27;da 4,7 puanla (12 yorum) değerlendiriliyoruz.</p>
+<div class="w kap icerik">
+  <article class="kart"><div class="bs"><span class="ik"><svg><use href="#i-kar"/></svg></span><h2>Fieber klima nedir, hangi tipleri var?</h2></div><p>Fieber, resmi sitesinde kendini inverter klima ve ısı pompası sistemleri sunan bir marka olarak tanıtıyor. Duvar tipi, kaset tipi ve salon tipi klima kategorileri var. Marka; DC Inverter teknolojisini, gümüş iyon özelliğini ve akıllı bağlantı ile uzaktan kontrolü öne çıkarıyor.</p><p>Evde çoğunlukla duvar tipi tercih edilir. Geniş salonlar ya da işyerleri için salon veya kaset tipi de gündeme gelebilir. Hangi modellerin elimizde olduğunu, ihtiyacınıza göre telefonda konuşuruz.</p></article><article class="kart"><div class="bs"><span class="ik"><svg><use href="#i-pin"/></svg></span><h2>Doğru klimayı seçmek için sorular</h2></div><p>Klima seçerken önce şunları düşünün. Cevaplarınızı bize söylerseniz uygun seçeneği birlikte daraltırız.</p><ul class="madde"><li><svg><use href="#i-tik"/></svg><span>Klima hangi odaya veya kaç metrekarelik alana takılacak?</span></li><li><svg><use href="#i-tik"/></svg><span>Oda güneş alıyor mu, çok kişi kullanıyor mu?</span></li><li><svg><use href="#i-tik"/></svg><span>Dış ünite için uygun ve güvenli bir yer var mı?</span></li><li><svg><use href="#i-tik"/></svg><span>Sadece serinletme mi, ısıtma da mı bekliyorsunuz?</span></li></ul></article><div class="bant"><b>Klimanız için hemen arayın</b><p>Sorunuzu anlatın, ne yapılabileceğini birlikte konuşalım.</p><div class="cta"><a class="btn ara" data-olay="ara" href="tel:+905065420129"><svg><use href="#i-tel"/></svg>Hemen ara</a><a class="btn wa" data-olay="whatsapp" href="https://wa.me/905065420129?text=Merhaba%2C%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20%C4%B0neg%C3%B6l%27de%20Fieber%20klima%20sat%C4%B1%C5%9F%C4%B1/montaj%C4%B1/bak%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%20Oda%20b%C3%BCy%C3%BCkl%C3%BC%C4%9F%C3%BCm%20ve%20adresim%3A%20"><svg><use href="#i-wa"/></svg>WhatsApp&#39;tan yaz</a></div></div><article class="kart"><div class="bs"><span class="ik"><svg><use href="#i-anahtar"/></svg></span><h2>Montaj: işin asıl belirleyici kısmı</h2></div><p>Klima ne kadar iyi olursa olsun, kötü montaj performansı düşürür. İç ve dış ünitenin yerleşimi, boru güzergâhı ve drenaj düzeni; hem verim hem de evin temizliği açısından önemlidir. Bu yüzden yerleşimi montajdan önce netleştirmek önemlidir.</p><p>Müşterimiz Sevdanur Y. bunu şöyle özetledi: &quot;Görüştüğümüz diğer firmalar randevu verme zahmetinde bile bulunmazken arar aramaz geldi.&quot;</p></article><article class="kart"><div class="bs"><span class="ik"><svg><use href="#i-kar"/></svg></span><h2>Klimayı verimli kullanmak için genel öneriler</h2></div><p>Fieber&#x27;in resmi sitesi sessiz çalışma modu ve hassas sıcaklık kontrolünü konfor özellikleri arasında sayıyor. Bu özelliklerden yararlanmak için klimayı gün boyu sık sık açıp kapatmak yerine dengeli bir sıcaklığa ayarlamak çoğu zaman daha rahat bir kullanım sağlar.</p><p>Oda kapıları ve pencereler kapalıyken klima daha az zorlanır. Filtrelerin temiz olması da hem hava akışı hem de hijyen için önemlidir. Bunlar her klima için geçerli genel tavsiyelerdir; cihazınıza özel bilgi için kullanım kılavuzuna göz atmanızı öneririz.</p></article><article class="kart"><div class="bs"><span class="ik"><svg><use href="#i-pin"/></svg></span><h2>Klima bakımı, hizmet bölgesi ve çalışma saatleri</h2></div><p>Klima bakımı yapıyoruz: filtre temizliği ve cihazın genel kontrolü, kullanım sezonundan önce yaptırılırsa en faydalısıdır.</p><p>İnegöl merkez, mahalleler ve köyler ile İznik ve Gürsu&#x27;ya hizmet veriyoruz. Dükkânımız İstiklal Cd. No:122/B, Süleymaniye, İnegöl&#x27;de; Pazartesi–Cumartesi 09:00–18:30 açığız, pazar kapalıyız. Google&#x27;da 4,7 puanla (12 yorum) değerlendiriliyoruz.</p></article>
 
-  <h2>Sık sorulan sorular</h2>
-  <div class="sss"><details><summary>Fieber klima için İnegöl&#x27;de yetkili servis var mı?</summary><p>Evet, Eymen Teknik Fieber klima yetkili servisidir. Satış, montaj ve bakım için 0506 542 01 29&#x27;u arayabilirsiniz.</p></details><details><summary>Klimayı sizden alıp montajı da yaptırabilir miyim?</summary><p>Evet, klima satışı ve montajı hizmetimiz var. Mevcut modeller değişebildiği için önce telefonla sormanız en doğrusu.</p></details><details><summary>Klima bakımı ne zaman yaptırılmalı?</summary><p>Kullanım sezonundan önce, yani yaz gelmeden kontrol ettirmek iyi bir alışkanlık. Filtreleri temiz tutmak da cihazın rahat çalışmasına yardım eder.</p></details><details><summary>Eski, artık çalışmayan klimamı onarır mısınız?</summary><p>Ömrünü doldurmuş eski klimaların onarımını yapmıyoruz. Yeni klima seçimi ve montajı konusunda yardımcı olabiliriz.</p></details></div>
+  <div class="sssk"><h2>Sık sorulan sorular</h2>
+  <div class="sss"><details><summary>Fieber klima için İnegöl&#x27;de yetkili servis var mı?</summary><p>Evet, Eymen Teknik Fieber klima yetkili servisidir. Satış, montaj ve bakım için 0506 542 01 29&#x27;u arayabilirsiniz.</p></details><details><summary>Klimayı sizden alıp montajı da yaptırabilir miyim?</summary><p>Evet, klima satışı ve montajı hizmetimiz var. Mevcut modeller değişebildiği için önce telefonla sormanız en doğrusu.</p></details><details><summary>Klima bakımı ne zaman yaptırılmalı?</summary><p>Kullanım sezonundan önce, yani yaz gelmeden kontrol ettirmek iyi bir alışkanlık. Filtreleri temiz tutmak da cihazın rahat çalışmasına yardım eder.</p></details></div></div>
 
   <div class="kutu">
-    <div class="etiket">Eymen Teknik</div>
-    <p><b>İstiklal Cd. No:122/B, Süleymaniye, İnegöl / Bursa</b></p>
-    <p>Pazartesi–Cumartesi 09:00 – 18:30 · Pazar kapalı</p>
-    <p><a class="google" data-olay="yol" href="https://www.google.com/maps/search/?api=1&amp;query=Eymen%20Teknik%20%C4%B0neg%C3%B6l&amp;query_place_id=ChIJoQWcO3zLyxQRrd8_oyjj1-k">Yol tarifi al →</a></p>
+    <span class="ik"><svg><use href="#i-pin"/></svg></span>
+    <div>
+      <p class="ad">Eymen Teknik</p>
+      <p><b>İstiklal Cd. No:122/B, Süleymaniye, İnegöl / Bursa</b></p>
+      <p class="sa">Pazartesi–Cumartesi 09:00 – 18:30 · Pazar kapalı</p>
+    </div>
+    <a class="btn wa" data-olay="yol" href="https://www.google.com/maps/search/?api=1&amp;query=Eymen%20Teknik%20%C4%B0neg%C3%B6l&amp;query_place_id=ChIJoQWcO3zLyxQRrd8_oyjj1-k"><svg style="color:var(--warm)"><use href="#i-pin"/></svg>Yol tarifi al</a>
   </div>
 
-  <h2>Diğer hizmetlerimiz</h2>
-  <ul class="linkler"><li><a href="/aiwa-klima-yetkili-servis-inegol/">Aiwa Klima Yetkili Servisi İnegöl</a></li><li><a href="/ikinci-el-kombi-inegol/">İnegöl İkinci El Kombi Satışı</a></li><li><a href="/inegol-klima-servisi/">İnegöl Klima Satış, Montaj ve Bakım</a></li><li><a href="/inegol-kombi-servisi/">İnegöl Kombi Bakım ve Arıza Servisi</a></li><li><a href="/iznik-gursu-kombi-klima-servisi/">İznik ve Gürsu&#x27;da Kombi ve Klima Servisi</a></li><li><a href="/sanica-yetkili-servis-inegol/">Sanica Kombi Yetkili Servisi İnegöl</a></li><li><a href="/">Ana sayfa</a></li></ul>
+  <div class="digerk"><h2>Diğer hizmetlerimiz</h2>
+  <ul class="linkler"><li><a href="/aiwa-klima-yetkili-servis-inegol/"><span>Aiwa Klima Yetkili Servisi İnegöl</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/ikinci-el-kombi-inegol/"><span>İnegöl İkinci El Kombi Satışı</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/inegol-klima-servisi/"><span>İnegöl Klima Satış, Montaj ve Bakım</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/inegol-kombi-servisi/"><span>İnegöl Kombi Bakım ve Arıza Servisi</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/iznik-gursu-kombi-klima-servisi/"><span>İznik ve Gürsu&#x27;da Kombi ve Klima Servisi</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/sanica-yetkili-servis-inegol/"><span>Sanica Kombi Yetkili Servisi İnegöl</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/"><span>Ana sayfa</span><svg><use href="#i-ok"/></svg></a></li></ul></div>
+</div>
 </main>
 
 <footer class="w son">Eymen Teknik · İstiklal Cd. No:122/B, Süleymaniye, İnegöl / Bursa · 0506 542 01 29</footer>
