@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /yorum/
+Sitemap: https://eymenteknikinegol.com/sitemap.xml
