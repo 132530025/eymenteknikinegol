@@ -210,7 +210,7 @@ h2{font-size:clamp(26px,6vw,38px);letter-spacing:-.025em;line-height:1.12;font-w
 (function(){var r=document.querySelector('#saatler tr[data-gun="'+new Date().getDay()+'"]');if(!r)return;r.className='bugun';
 var s=r.lastChild.textContent,b=document.getElementById('bugun'),acik=!/kapal/i.test(s);
 b.lastChild.textContent=!acik?'Bugün kapalı':/24 saat/i.test(s)?'Bugün 24 saat açık':'Bugün açık · '+s;if(!acik)b.firstChild.style.background='#B0B6C0';})();
-(function(){var u='';if(!u)return;document.addEventListener('click',function(e){var a=e.target.closest('[data-olay]');if(a&&navigator.sendBeacon)navigator.sendBeacon(u+'?s=eymen-teknik&e='+a.dataset.olay);});})();
+(function(){var u='https://sayac.miletosstudio.com/c';if(!u)return;document.addEventListener('click',function(e){var a=e.target.closest('[data-olay]');if(a&&navigator.sendBeacon)navigator.sendBeacon(u+'?s=eymen-teknik&e='+a.dataset.olay);});})();
 </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b08d03382dc6456d9699357890311011"}'></script>
 </body>
