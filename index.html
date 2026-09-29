@@ -1,0 +1,205 @@
+﻿<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Eymen Teknik · Kombi ve klima servisi İnegöl</title>
+<meta name="description" content="İnegöl Süleymaniye: Kombi ve klima servisi. Google'da 4,7 puan, 12 yorum. 0506 542 01 29">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F3EE;--card:#FFFFFF;--ink:#1B2130;--muted:#5D6573;--line:#E3DDD3;--warm:#D4541F;--warm-bg:#FBEDE4;--cool:#2466D1;--cool-bg:#E6EEFB;--wa:#1DA851}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+a{color:inherit;text-decoration:none}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+svg{width:1em;height:1em;flex:none}
+
+/* üst bar */
+.top{position:sticky;top:0;z-index:5;background:rgba(246,243,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .w{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-weight:800;letter-spacing:-.02em;font-size:18px}
+.logo i{display:inline-block;width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,var(--warm),var(--cool));margin-right:8px;vertical-align:1px}
+.top a.tel{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px}
+
+/* ilk ekran */
+.hero{padding-top:44px;padding-bottom:36px}
+.yer{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.yer:before{content:"";width:28px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--warm),var(--cool))}
+h1{font-size:clamp(40px,11vw,76px);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin:18px 0 16px}
+h1 span{display:table;padding:.14em 0 .1em;margin-top:.06em;background:linear-gradient(90deg,var(--warm),var(--cool));-webkit-background-clip:text;background-clip:text;color:transparent}
+.slogan{font-size:19px;color:var(--muted);max-width:30ch}
+.puan{display:inline-flex;align-items:center;gap:10px;margin-top:24px;padding:10px 16px;background:var(--card);border:1px solid var(--line);border-radius:999px;font-weight:700;font-size:15px}
+.puan .yildiz{color:#F4A417;display:flex;gap:1px}
+.puan small{color:var(--muted);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 26px;border-radius:14px;font-weight:800;font-size:17px}
+.btn.ara{background:var(--ink);color:#fff}
+.btn.wa{background:var(--card);border:1.5px solid var(--ink)}
+.btn.wa svg{color:var(--wa)}
+.saat{margin-top:16px;font-size:14px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.saat b{width:8px;height:8px;border-radius:50%;background:var(--wa);display:inline-block}
+
+/* sıcak / soğuk */
+section{padding:40px 0}
+h2{font-size:clamp(26px,6vw,38px);letter-spacing:-.025em;line-height:1.12;font-weight:800;margin-bottom:22px}
+.ikili{display:grid;grid-template-columns:1fr 1fr;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
+.ikili>div{padding:28px 24px 30px}
+.sicak{background:var(--warm-bg)}
+.soguk{background:var(--cool-bg)}
+.notr{background:#EFEAE2}
+.su{background:var(--cool-bg)} .su h3 svg{color:var(--cool)}
+.ikili.tek{grid-template-columns:1fr}
+.ikili h3{display:flex;align-items:center;gap:10px;font-size:24px;font-weight:800;letter-spacing:-.02em;margin-bottom:14px}
+.sicak h3 svg{color:var(--warm)} .soguk h3 svg{color:var(--cool)} .notr h3 svg{color:var(--muted)}
+.ikili ul{list-style:none}
+.ikili li{padding:10px 0;border-top:1px solid rgba(27,33,48,.1);font-weight:600}
+
+/* nedenler */
+.neden{list-style:none;border-top:1px solid var(--line)}
+.neden li{display:grid;grid-template-columns:56px 1fr;gap:4px 12px;padding:22px 0;border-bottom:1px solid var(--line)}
+.neden .no{font-weight:800;font-size:15px;color:var(--muted);padding-top:4px}
+.neden h3{font-size:21px;font-weight:800;letter-spacing:-.015em}
+.neden p{grid-column:2;color:var(--muted);font-size:16px}
+.neden p cite{font-style:normal;font-weight:700;color:var(--ink);white-space:nowrap}
+
+/* büyük yorum */
+.soz{background:var(--ink);color:#F2EEE7;border-radius:26px;padding:44px 28px}
+.soz .yildiz{color:#F4A417;display:flex;gap:3px;font-size:18px;margin-bottom:20px}
+.soz blockquote{font-size:clamp(22px,5.4vw,34px);line-height:1.3;letter-spacing:-.02em;font-weight:700}
+.soz footer{margin-top:22px;color:#AEB5C2;font-weight:600;font-size:15px}
+.kisa{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.kisa p{font-weight:600}
+.kisa span{display:block;margin-top:6px;color:var(--muted);font-size:14px;font-weight:600}
+.google{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-weight:700;font-size:15px;border-bottom:1.5px solid var(--ink);padding-bottom:2px}
+
+/* adımlar */
+.adim{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:a}
+.adim div{counter-increment:a}
+.adim div:before{content:counter(a);display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--card);border:1px solid var(--line);font-weight:800;margin-bottom:12px}
+.adim h3{font-size:18px;font-weight:800}
+.adim p{color:var(--muted);font-size:15px;margin-top:4px}
+
+/* konum */
+.konum{display:grid;grid-template-columns:1fr 1fr;gap:32px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px}
+.konum .sol{display:flex;flex-direction:column;align-items:flex-start}
+.harita{flex:1 1 0;align-self:stretch;min-height:140px;margin-bottom:20px;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--line)}
+.harita iframe{width:100%;height:100%;border:0;display:block}
+.konum tr.bugun td{color:var(--ink);font-weight:800}
+.konum tr.bugun td:first-child:after{content:"Bugün";margin-left:8px;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--ink);color:#fff}
+.konum p{font-size:18px;font-weight:700;margin:6px 0 16px}
+.konum table{width:100%;border-collapse:collapse;font-size:15px}
+.konum td{padding:13px 0;border-bottom:1px solid var(--line)}
+.konum td+td{text-align:right;font-weight:700}
+.etiket{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.son{padding-top:28px;padding-bottom:20px;color:var(--muted);font-size:13px}
+
+/* alt bar */
+.alt{position:fixed;left:0;right:0;bottom:0;z-index:6;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(246,243,238,.95);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+.alt .btn{height:52px;width:100%}
+
+@media (max-width:700px){
+  .ikili{grid-template-columns:1fr}
+  .kisa,.adim,.konum{grid-template-columns:1fr}
+  .harita{flex:none;height:240px}
+  .kisa{gap:16px}
+  .cta .btn{flex:1 1 100%}
+  .top a.tel span{display:none}
+}
+@media (min-width:701px){ .alt{display:none} body{padding-bottom:0} }
+@media (prefers-reduced-motion:no-preference){
+  .hero>*{animation:gir .6s both}
+  .hero>*:nth-child(2){animation-delay:.05s}.hero>*:nth-child(3){animation-delay:.1s}.hero>*:nth-child(4){animation-delay:.15s}.hero>*:nth-child(5){animation-delay:.2s}
+  @keyframes gir{from{opacity:0;transform:translateY(10px)}}
+}
+</style>
+</head>
+<body>
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-tel" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
+  <symbol id="i-yildiz" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></symbol>
+  <symbol id="i-alev" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2s5 4.6 5 10a5 5 0 0 1-10 0c0-2.2 1.2-4 1.2-4s.3 2.3 2 2.8C10 7.5 12 2 12 2zm0 20a8 8 0 0 1-8-8c0-3.2 1.7-6 1.7-6S6 11 8 12.5A6 6 0 0 0 12 22z"/></symbol>
+  <symbol id="i-kar" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 2v20M4.2 6.5l15.6 11M4.2 17.5l15.6-11M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5"/></symbol>
+  <symbol id="i-camasir" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 2.5h14a1.5 1.5 0 0 1 1.5 1.5v16a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 20V4A1.5 1.5 0 0 1 5 2.5zM3.5 7h17"/><circle cx="12" cy="14" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-damla" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5s-6.5 7.2-6.5 12a6.5 6.5 0 0 0 13 0c0-4.8-6.5-12-6.5-12z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+</svg>
+
+<header class="top"><div class="w">
+  <a class="logo" href="#"><i></i>Eymen Teknik</a>
+  <a class="tel" href="tel:+905065420129"><svg><use href="#i-tel"/></svg><span>0506 542 01 29</span></a>
+</div></header>
+
+<main>
+<div class="w hero">
+  <div class="yer">İnegöl · Süleymaniye</div>
+  <h1>Kombi ve klima servisi <span>İnegöl'de.</span></h1>
+  <p class="slogan">Arayınca gelen, yaptığı her işi anlatan usta.</p>
+  <div><a class="puan" href="https://www.google.com/maps/search/?api=1&amp;query=Eymen%20Teknik%20%C4%B0neg%C3%B6l&amp;query_place_id=ChIJoQWcO3zLyxQRrd8_oyjj1-k"><span class="yildiz"><svg><use href="#i-yildiz"/></svg><svg><use href="#i-yildiz"/></svg><svg><use href="#i-yildiz"/></svg><svg><use href="#i-yildiz"/></svg><svg><use href="#i-yildiz"/></svg></span>4,7 <small>· Google'da 12 yorum</small></a></div>
+  <div class="cta">
+    <a class="btn ara" href="tel:+905065420129"><svg><use href="#i-tel"/></svg>Hemen ara</a>
+    <a class="btn wa" href="https://wa.me/905065420129?text=Merhaba%2C%20kombim/klimam%20i%C3%A7in%20servis%20istiyorum."><svg><use href="#i-wa"/></svg>WhatsApp'tan yaz</a>
+  </div>
+  <a class="saat" id="bugun" href="#konum"><b></b>Çalışma saatleri</a>
+</div>
+
+<section><div class="w">
+  <h2>Isıtan da, soğutan da.</h2>
+  <div class="ikili"><div class="sicak"><h3><svg><use href="#i-alev"/></svg>Kombi</h3><ul><li>Kombi bakımı</li><li>Kombi arıza ve tamiri</li></ul></div><div class="soguk"><h3><svg><use href="#i-kar"/></svg>Klima</h3><ul><li>Klima bakımı</li><li>Klima montajı</li><li>Eski klimayı yeniden çalışır hale getirme</li></ul></div></div>
+</div></section>
+
+<section><div class="w">
+  <h2>Müşterileri neden tekrar çağırıyor?</h2>
+  <ol class="neden"><li><span class="no">01</span><h3>Arayınca gelir</h3><p>“Görüştüğümüz diğer firmalar randevu verme zahmetinde bile bulunmazken arar aramaz geldi.” <cite>— Sevdanur Y.</cite></p></li><li><span class="no">02</span><h3>Yaptığını anlatır</h3><p>“Yapılan tüm işlemleri tek tek anlattılar, aklımda hiçbir soru işareti kalmadı.” <cite>— Mustafa K.</cite></p></li><li><span class="no">03</span><h3>Temiz çalışır</h3><p>“İşçiliği, esnaflığı güzel, temiz. Tavsiye ederim.” <cite>— Süleyman Z.</cite></p></li></ol>
+</div></section>
+
+<section><div class="w">
+  <div class="soz">
+    <div class="yildiz"><svg><use href="#i-yildiz"/></svg><svg><use href="#i-yildiz"/></svg><svg><use href="#i-yildiz"/></svg><svg><use href="#i-yildiz"/></svg><svg><use href="#i-yildiz"/></svg></div>
+    <blockquote>“Gönül rahatlığıyla evinize çağırabileceğiniz, işini bilen ve dürüst bir ekip. Bundan sonra klima ve kombiyle ilgili her konuda ilk tercihim Eymen Teknik olacak.”</blockquote>
+    <footer>Mustafa K. · Google yorumu, Aralık 2025</footer>
+  </div>
+  <div class="kisa"><div><p>“Klima montajı için bu işletmeyi tercih ettim. Ustam işinde harbi usta.”</p><span>Serhat Y.</span></div><div><p>“Kombi arızasında usta işinde başarılı.”</p><span>Aslan İ.</span></div><div><p>“Sorun çözme odaklı, başarılı işletme.”</p><span>Kamil İ.</span></div></div>
+  <a class="google" href="https://www.google.com/maps/search/?api=1&amp;query=Eymen%20Teknik%20%C4%B0neg%C3%B6l&amp;query_place_id=ChIJoQWcO3zLyxQRrd8_oyjj1-k">Google'daki 12 yorumun hepsini oku →</a>
+</div></section>
+
+<section><div class="w">
+  <h2>Nasıl çalışıyoruz?</h2>
+  <div class="adim"><div><h3>Arayın ya da yazın</h3><p>Cihazınızın derdini anlatın, uygun saati konuşalım.</p></div><div><h3>Usta gelir</h3><p>Arızayı yerinde tespit eder.</p></div><div><h3>İş biter</h3><p>Cihazınız yeniden çalışır halde teslim edilir.</p></div></div>
+</div></section>
+
+<section id="konum"><div class="w">
+  <h2>Nerede, ne zaman?</h2>
+  <div class="konum">
+    <div class="sol">
+      <div class="harita"><iframe src="https://maps.google.com/maps?q=40.0851211%2C29.5020244%20%28Eymen%20Teknik%29&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Eymen Teknik harita"></iframe></div>
+      <div class="etiket">Adres</div>
+      <p>İstiklal Cd., Süleymaniye, İnegöl / Bursa</p>
+      <a class="btn wa" href="https://www.google.com/maps/search/?api=1&amp;query=Eymen%20Teknik%20%C4%B0neg%C3%B6l&amp;query_place_id=ChIJoQWcO3zLyxQRrd8_oyjj1-k"><svg style="color:var(--warm)"><use href="#i-pin"/></svg>Yol tarifi al</a>
+    </div>
+    <div>
+      <div class="etiket">Çalışma saatleri</div>
+      <table id="saatler"><tr data-gun="1"><td>Pazartesi</td><td>09:00 – 18:30</td></tr><tr data-gun="2"><td>Salı</td><td>09:00 – 18:30</td></tr><tr data-gun="3"><td>Çarşamba</td><td>09:00 – 18:30</td></tr><tr data-gun="4"><td>Perşembe</td><td>09:00 – 18:30</td></tr><tr data-gun="5"><td>Cuma</td><td>09:00 – 18:30</td></tr><tr data-gun="6"><td>Cumartesi</td><td>09:00 – 18:30</td></tr><tr data-gun="0"><td>Pazar</td><td>Kapalı</td></tr></table>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer class="w son">Eymen Teknik · İstiklal Cd., Süleymaniye, İnegöl / Bursa · 0506 542 01 29</footer>
+
+<nav class="alt">
+  <a class="btn ara" href="tel:+905065420129"><svg><use href="#i-tel"/></svg>Ara</a>
+  <a class="btn wa" href="https://wa.me/905065420129?text=Merhaba%2C%20kombim/klimam%20i%C3%A7in%20servis%20istiyorum."><svg><use href="#i-wa"/></svg>WhatsApp</a>
+</nav>
+<script>
+(function(){var r=document.querySelector('#saatler tr[data-gun="'+new Date().getDay()+'"]');if(!r)return;r.className='bugun';
+var s=r.lastChild.textContent,b=document.getElementById('bugun'),acik=!/kapal/i.test(s);
+b.lastChild.textContent=!acik?'Bugün kapalı':/24 saat/i.test(s)?'Bugün 24 saat açık':'Bugün açık · '+s;if(!acik)b.firstChild.style.background='#B0B6C0';})();
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b08d03382dc6456d9699357890311011"}'></script>
+</body>
+</html>
