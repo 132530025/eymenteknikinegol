@@ -56,6 +56,9 @@ h2{font-size:clamp(26px,6vw,38px);letter-spacing:-.025em;line-height:1.12;font-w
 .soguk{background:var(--cool-bg)}
 .notr{background:#EFEAE2}
 .su{background:var(--cool-bg)} .su h3 svg{color:var(--cool)}
+.hizmet-alt{font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:-10px 0 18px}
+.hizmet-not{margin-top:40px;text-align:center;font-weight:700;color:var(--muted)}
+.hizmet-not b{display:block;color:var(--ink);margin-bottom:12px}
 .ikili.tek{grid-template-columns:1fr}
 .ikili h3{display:flex;align-items:center;gap:10px;font-size:24px;font-weight:800;letter-spacing:-.02em;margin-bottom:14px}
 .sicak h3 svg{color:var(--warm)} .soguk h3 svg{color:var(--cool)} .notr h3 svg{color:var(--muted)}
@@ -104,6 +107,10 @@ h2{font-size:clamp(26px,6vw,38px);letter-spacing:-.025em;line-height:1.12;font-w
 /* alt bar */
 .alt{position:fixed;left:0;right:0;bottom:0;z-index:6;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:10px 10px calc(10px + env(safe-area-inset-bottom));background:rgba(246,243,238,.95);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
 .alt .btn{height:52px;width:100%;padding:0 6px;font-size:15px;gap:6px}
+.alt .btn[data-olay=whatsapp]{background:#E8F6EE;border-color:var(--wa);color:#137A38}
+.alt .btn[data-olay=whatsapp] svg{color:var(--wa)}
+.alt .btn[data-olay=yol]{background:var(--cool-bg);border-color:var(--cool);color:var(--cool)}
+.alt .btn[data-olay=yol] svg{color:var(--cool)}
 .yetkili{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:8px 12px;border-radius:10px;background:var(--card);border:1px solid var(--line);font-weight:700;font-size:15px}
 .yetkili svg{color:var(--cool);font-size:18px}
 .linkler{list-style:none;display:grid;gap:8px}
@@ -252,7 +259,7 @@ h2{font-size:clamp(26px,6vw,38px);letter-spacing:-.025em;line-height:1.12;font-w
   </div>
 
   <div class="digerk"><h2>Diğer hizmetlerimiz</h2>
-  <ul class="linkler"><li><a href="/aiwa-klima-yetkili-servis-inegol/"><span>Aiwa Klima Yetkili Servisi İnegöl</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/ikinci-el-kombi-inegol/"><span>İnegöl İkinci El Kombi Satışı</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/inegol-klima-servisi/"><span>İnegöl Klima Satış, Montaj ve Bakım</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/inegol-kombi-servisi/"><span>İnegöl Kombi Bakım ve Arıza Servisi</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/iznik-gursu-kombi-klima-servisi/"><span>İznik ve Gürsu&#x27;da Kombi ve Klima Servisi</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/sanica-yetkili-servis-inegol/"><span>Sanica Kombi Yetkili Servisi İnegöl</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/"><span>Ana sayfa</span><svg><use href="#i-ok"/></svg></a></li></ul></div>
+  <ul class="linkler"><li><a href="/aiwa-klima-yetkili-servis-inegol/"><span>Aiwa Klima Yetkili Servisi İnegöl</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/inegol-klima-servisi/"><span>İnegöl Klima Satış, Montaj ve Bakım</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/inegol-kombi-servisi/"><span>İnegöl Kombi Bakım ve Arıza Servisi</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/iznik-gursu-kombi-klima-servisi/"><span>İznik ve Gürsu&#x27;da Kombi ve Klima Servisi</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/sanica-yetkili-servis-inegol/"><span>Sanica Kombi Yetkili Servisi İnegöl</span><svg><use href="#i-ok"/></svg></a></li><li><a href="/"><span>Ana sayfa</span><svg><use href="#i-ok"/></svg></a></li></ul></div>
 </div>
 </main>
 
@@ -261,7 +268,7 @@ h2{font-size:clamp(26px,6vw,38px);letter-spacing:-.025em;line-height:1.12;font-w
 <nav class="alt">
   <a class="btn ara" data-olay="ara" href="tel:+905065420129"><svg><use href="#i-tel"/></svg>Ara</a>
   <a class="btn wa" data-olay="whatsapp" href="https://wa.me/905065420129?text=Merhaba%2C%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20%C4%B0neg%C3%B6l%27de%20Fieber%20klima%20sat%C4%B1%C5%9F%C4%B1/montaj%C4%B1/bak%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%20Oda%20b%C3%BCy%C3%BCkl%C3%BC%C4%9F%C3%BCm%20ve%20adresim%3A%20"><svg><use href="#i-wa"/></svg>WhatsApp</a>
-  <a class="btn wa" data-olay="yol" href="https://www.google.com/maps/search/?api=1&amp;query=Eymen%20Teknik%20%C4%B0neg%C3%B6l&amp;query_place_id=ChIJoQWcO3zLyxQRrd8_oyjj1-k"><svg style="color:var(--warm)"><use href="#i-pin"/></svg>Yol tarifi</a>
+  <a class="btn wa" data-olay="yol" href="https://www.google.com/maps/search/?api=1&amp;query=Eymen%20Teknik%20%C4%B0neg%C3%B6l&amp;query_place_id=ChIJoQWcO3zLyxQRrd8_oyjj1-k"><svg><use href="#i-pin"/></svg>Yol tarifi</a>
 </nav>
 <script>
 (function(){var u='https://sayac.miletosstudio.com/c';if(!u)return;document.addEventListener('click',function(e){var a=e.target.closest('[data-olay]');if(a&&navigator.sendBeacon)navigator.sendBeacon(u+'?s=eymen-teknik&e='+a.dataset.olay);});})();
